@@ -1,0 +1,11 @@
+import pandas as pd
+p = r"c:\Users\Chris Maria Shajan C\Downloads\Smartphone Usage Analytics Dashboard\backend\data\mobile_addiction_data.csv"
+df = pd.read_csv(p)
+print("shape", df.shape)
+print("missing_total", int(df.isna().sum().sum()))
+print("dups", int(df.duplicated().sum()))
+for c in df.columns:
+    if df[c].dtype == "object" or df[c].nunique() < 20:
+        print(c, "->", list(df[c].unique())[:40], "n=", df[c].nunique())
+num = df.select_dtypes(include="number")
+print(num.describe().T[["min","max","mean"]].round(3).to_string())

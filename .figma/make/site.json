@@ -1,0 +1,10 @@
+{
+  "description": "Explore smartphone habits and their relationships with sleep, stress, activity, and productivity through interactive analytics built for research and digital well-being awareness.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
